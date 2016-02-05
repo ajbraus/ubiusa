@@ -1,0 +1,10 @@
+h1 Entrants
+  form(ng-submit='createEntrant()')
+    .form-group
+      input.form-control(type='text', ng-model='entrant.title')
+    .text-right
+      button.btn.btn-primary(type='submit') Save
+  ul.list-group
+    li.list-group-item(ng-repeat='entrant in entrants')
+      | {{entrant.title}}
+      a.pull-right(ng-click='deletePost(entrant, $index)') delete

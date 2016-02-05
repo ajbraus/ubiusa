@@ -1,0 +1,19 @@
+{
+  "name": "ubi-raffle",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Adam Braus <ajbraus@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "/public/vendor",
+    "test",
+    "tests"
+  ]
+}
