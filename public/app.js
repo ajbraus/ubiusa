@@ -14,13 +14,13 @@ angular.module('myApp', ['ui.router',
     $stateProvider
       .state('new-entrant', {
         url: "/",
-        templateUrl: 'templates/entrants-new.html',
+        templateUrl: 'templates/entrants-new',
         controller: 'NewEntrantCtrl'        
       })
 
       .state('entrants', {
         url: "/admin",
-        templateUrl: 'templates/posts-index.html',
+        templateUrl: 'templates/posts-index',
         controller: 'EntrantsIndexCtrl'
       });
 
