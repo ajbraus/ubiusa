@@ -14,11 +14,7 @@ angular.module('myApp.controllers', [])
 
     $http.get(url).then(
       function (response) {
-        $scope.success = "Email confirmed. Redirecting you home ..."
-        setTimeout(function(){ 
-          $state.go('new-entrant');
-        }, 3000);
-        
+        $scope.success = "Email confirmed"
       },
       function (response) {
         console.log(response)
