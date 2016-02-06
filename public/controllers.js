@@ -10,6 +10,16 @@ angular.module('myApp.controllers', [])
     
   })
 
+  .controller('ConfirmEmailCtrl', function ($scope, $window, $stateParams) {
+    $http($window.location.origin + '/api/confirm?token=' + $stateParams.token).then(
+      function (response) {
+        console.log(response)
+      },
+      function (response) {
+        console.log(response)
+      })
+  })
+
   // NEW ENTRANT
   .controller('NewEntrantCtrl', function ($scope, $http, Entrant) {
 
@@ -17,10 +27,8 @@ angular.module('myApp.controllers', [])
     $scope.createEntrant = function() {   
       var entrant = new Entrant($scope.entrant);
       entrant.$save(function(data) {
-        Entrant.get({ id: data.objectId }, function(entrant) {
-          $scope.entrants.unshift(entrant);
-          $scope.entrant = {};
-        })
+        $('#afterEnter').modal('show')
+        $scope.enteredRaffle = true;
       })
     }; 
 

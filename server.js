@@ -8,6 +8,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var resources = require('./resources');
+var mailer = require('express-mailer');
 
 var app = express();
 
@@ -22,6 +23,24 @@ mongoose.connect(
   process.env.MONGOLAB_URI ||
   process.env.MONGOHQ_URL
 );
+
+mailer.extend(app, {
+  from: 'UBI Raffle <info@ubiraffle.org>', 
+  host: 'smtp.gmail.com', // hostname 
+  secureConnection: true, // use SSL 
+  port: 465, // port for secure SMTP 
+  transportMethod: 'SMTP', // default is SMTP. Accepts anything that nodemailer accepts 
+  auth: {
+    user: 'info@ubiraffle.org',
+    pass: process.env.EMAIL_SECRET
+  }
+});
+
+if (process.env.NODE_ENV === 'production') {
+  app.locals.baseUrl = 'https://www.ubiraffle.org'
+} else if (process.env.NODE_ENV === 'development') {
+  app.locals.baseUrl = 'http://localhost:3000'
+}
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));

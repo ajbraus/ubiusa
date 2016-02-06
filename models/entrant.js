@@ -9,6 +9,8 @@ var EntrantSchema = new Schema({
     created_at          : { type: Date }
   , updated_at          : { type: Date }
   , email               : { type: String }
+  , confirmedAt         : { type: Date }
+  , emailToken          : { type: Date }
   
   , first               : { type: String }
   , last                : { type: String }

@@ -5,9 +5,9 @@ header#page-top
       .col-md-12
         img.img-responsive(src='img/profile.png', alt='')
         .intro-text
-          span.name Win a Basic Income for a Year
+          span.name Win a Basic Income
           hr.star-light
-          .skills A Universal Basic Income (UBI) means every citizen above the age of 16 recieves $1000 per month.
+          .skills A Universal Basic Income (UBI) means eliminating poverty by giving every citizen above the age of sixteen $1000 per month.
           br
           .skills UBI Raffle is a not-for-profit organization dedicated to promoting a Universal Basic Income in the United States.
           br
@@ -18,7 +18,7 @@ section#portfolio
   .container
     .row
       .col-md-12.text-center
-        h2 What Could You Do With Your UBI?
+        h2 What Would You Do With Your UBI?
         hr.star-primary
     .row
       .col-sm-4.portfolio-item
@@ -41,8 +41,8 @@ section#about.success
         h2 How the UBI Raffle Works
         hr.star-light
     .row
-      .col-md-4.col-md-offset-2
-        p The UBI Raffle is supported by recurring donations through Patreon and is #[b free to enter].
+      .col-md-8.col-md-offset-2
+        p The UBI Raffle is supported by #[a(href="https://www.patreon.com/ubiraffle?ty=h") recurring monthly donations through Patreon] and is #[b free to enter].
         p To be eligible to win the UBI Raffle you must be 
           ol 
             li An American Citizen
@@ -51,12 +51,13 @@ section#about.success
         p To register for the raffle
           ol
             li Enter your information below
+            li Confirm your email
             li Like the UBI Raffle Facebook page
             li Share a link to UBIRaffle.org on Facebook, Instagram, and Twitter
-        p To reenter for the next month, simply reshare ubiraffle.org on social media
+        p You will receive an email with the next winner and you can reenter at that time by sharing ubiraffle.org to social media.
 
 // Contact Section
-section#donate
+section#meet-ubi
   .container
     .row
       .col-md-12.text-center
@@ -67,10 +68,10 @@ section#donate
         p Ubi (#[i you`-bee]) is the friendly mascot of the UBI Raffle. He enjoys playing games with friends, helping his owner with small tasks, camping, and artisinal cocktails.
         .col-md-10.col-md-offset-1.text-center
           img.img-responsive(ng-src="img/ubi.png")
-          p Ubi will be picking the winners of the UBI Raffle.
+          p Ubi wants you to enter and support the UBI Raffle because he really likes picking the names of the winners.
 
 // Contact Section
-section#enter.enter
+section#donate.enter
   img.patreon-logo(ng-src="img/patreon_logo.png")
   .container
     .row
@@ -82,7 +83,7 @@ section#enter.enter
         a.btn.btn-success.btn-lg(href="https://www.patreon.com/ubiraffle", target="_blank") Donate
 
 // Contact Section
-section#donate
+section#enter
   .container
     .row
       .col-md-12.text-center
@@ -90,7 +91,8 @@ section#donate
         hr.star-primary
     .row
       .col-md-8.col-md-offset-2
-        form(ng-submit="createEntrant()" novalidate='')
+        .alert.alert-info(ng-show="enteredRaffle") Thank you for entering the raffle. You will receive an email about the times of the raffle drawing and winners.
+        form(ng-submit="createEntrant()" novalidate='' ng-hide="enteredRaffle")
           .row.control-group
             .form-group.col-xs-6.floating-label-form-group.controls
               label First
@@ -108,7 +110,7 @@ section#donate
           .row.control-group
             .form-group.col-xs-12.floating-label-form-group.controls
               label Address
-              input#phone.form-control(type='tel', ng-model="entrant.address", placeholder='Address', required='', data-validation-required-message='Please enter your phone number.')
+              input#phone.form-control(type='text', ng-model="entrant.address", placeholder='Address', required='', data-validation-required-message='Please enter your phone number.')
               p.help-block.text-danger
           .row.control-group
             .form-group.col-xs-6.floating-label-form-group.controls
@@ -128,8 +130,32 @@ section#donate
               label Phone Number
               input#phone.form-control(type='tel', ng-model="entrant.phone", placeholder='Phone Number', required='', data-validation-required-message='Please enter your phone number.')
               p.help-block.text-danger
+          .row.control-group
+            .form-group.col-xs-12.floating-label-form-group.controls
+              label Story
+              textarea#story.form-control(ng-model="entrant.story", placeholder='What would you do with your UBI?', required='', data-validation-required-message='.')
+              p.help-block.text-danger
           br
           #success
           .row
             .form-group.col-xs-12
               button.btn.btn-success.btn-lg(type='submit') Enter Raffle
+
+
+#afterEnter.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+  .modal-dialog(role='document')
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') &times;
+        h4#myModalLabel.modal-title Last Step: Share UBI Raffle
+      .modal-body
+        ol
+          li
+            a(href="https://www.facebook.com/UBI-Raffle-1725006811106953/", target="_blank") Like UBI Raffle's Facebook Page
+          li Copy (or modify) this text and share it on #[a(href="https://www.facebook.com", target="_blank") Facebook] 
+        .row
+          .col-xs-10.col-xs-offset-1
+            .well I'm supporting UBIRaffle.org to help to end poverty in the US. #[br] #[br] UBI Raffle is a not-for-profit organization dedicated to promoting a Universal Basic Income in the US by running a free-to-enter raffle to win $1000 per month for a year. #[br] #[br] Share, Support, and Enter to win at UBIRaffle.org.
+      .modal-footer
+        button.btn.btn-default(type='button', data-dismiss='modal') All Done!

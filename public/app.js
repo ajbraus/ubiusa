@@ -22,6 +22,12 @@ angular.module('myApp', ['ui.router',
         url: "/admin",
         templateUrl: 'templates/posts-index',
         controller: 'EntrantsIndexCtrl'
+      })
+
+      .state('confirm-email', {
+        url: "/confirm",
+        templateUrl: 'templates/confirm-email',
+        controller: 'ConfirmEmailCtrl'
       });
 
     $urlRouterProvider.otherwise("/");
