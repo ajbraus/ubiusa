@@ -25,7 +25,7 @@ angular.module('myApp', ['ui.router',
       })
 
       .state('confirm-email', {
-        url: "/confirm",
+        url: "/confirm?token",
         templateUrl: 'templates/confirm-email',
         controller: 'ConfirmEmailCtrl'
       });

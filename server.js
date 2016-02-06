@@ -1,3 +1,5 @@
+process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+
 require('dotenv').load();
 
 var express = require('express');
@@ -37,7 +39,7 @@ mailer.extend(app, {
 });
 
 if (process.env.NODE_ENV === 'production') {
-  app.locals.baseUrl = 'https://www.ubiraffle.org'
+  app.locals.baseUrl = 'http://www.ubiraffle.org'
 } else if (process.env.NODE_ENV === 'development') {
   app.locals.baseUrl = 'http://localhost:3000'
 }
@@ -57,37 +59,5 @@ app.get('/templates/:name', resources.templates);
 require('./resources/entrants')(app);
 
 app.get('/*', resources.index);
-
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
-});
-
-// error handlers
-
-// development error handler
-// will print stacktrace
-if (app.get('env') === 'development') {
-  app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    res.render('error', {
-      message: err.message,
-      error: err
-    });
-  });
-}
-
-// production error handler
-// no stacktraces leaked to user
-app.use(function(err, req, res, next) {
-  res.status(err.status || 500);
-  res.render('error', {
-    message: err.message,
-    error: {}
-  });
-});
-
 
 module.exports = app;

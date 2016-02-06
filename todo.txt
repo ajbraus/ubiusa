@@ -3,11 +3,10 @@ DONE Meet Ubi
 DONE Back Raffle through Patreon
 DONE facebook page
 DONE Enter Raffel
+DONE confirm email
 
 prevent duplicate entries
-confirm email
 open graph images/text
-
 
 What happens when you win?
 1. Have the option to give your UBI to someone less fortunate. In which case UBI Raffle has non-profit partners who will pick someone for whom a UBI would make an enormous impact on their life, such as preventing them from becoming homeless.

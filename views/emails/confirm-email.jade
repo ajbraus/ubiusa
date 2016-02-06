@@ -3,6 +3,6 @@ extends email-layout
 block body
   p
     strong Welcome #{entrant.first}, 
-    p Click here to confirm your email, or paste this link into your browser
-    #[a(href="#{baseUrl}/confirm?token=#{token}") GA Q&A]. Visit GA Q&A and login to start asking, answering, and voting on questions.
+    p #[a(href="#{baseUrl}/confirm?token=#{entrant.emailToken}") Click here to confirm your email], or paste this link into your browser
+    p #{baseUrl}/confirm?token=#{entrant.emailToken}
     

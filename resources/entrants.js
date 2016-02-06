@@ -17,13 +17,13 @@ module.exports = function(app) {
   // Create Entrant
   app.post('/api/entrants', function (req, res) {
     var entrant = new Entrant(req.body)
+    var token = randomString(16, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
+    
+    entrant.emailToken = token;
+
     entrant.save( function (err, entrant) {
       if (!entrant) { return res.status(500).send('Couldn\'t save entry') } 
 
-      // Generate emailToken
-      var token = randomString(16, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
-      entrant.emailToken = token;
-      entrant.save();
       // Send link to confirm email
       app.mailer.send('emails/confirm-email', {
         to: entrant.email,
@@ -38,7 +38,7 @@ module.exports = function(app) {
   });
 
   app.get('/api/confirm', function (req, res) {
-    entrant.findOne({ emailToken: req.query.token }, function (err, entrant) {
+    Entrant.findOne({ emailToken: req.query.token }, function (err, entrant) {
       if (!entrant) { return res.status(500).send('Email not confirmed') } 
 
       entrant.confirmedAt = new Date();

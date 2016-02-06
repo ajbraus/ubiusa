@@ -7,13 +7,18 @@
 angular.module('myApp.controllers', [])
   .controller('MainCtrl', function ($rootScope, $scope) {
     // INITIALIZATION AND NAVBAR LOGIC
-    
   })
 
-  .controller('ConfirmEmailCtrl', function ($scope, $window, $stateParams) {
-    $http($window.location.origin + '/api/confirm?token=' + $stateParams.token).then(
+  .controller('ConfirmEmailCtrl', function ($scope, $window, $http, $stateParams, $state) {
+    var url = $window.location.origin + '/api/confirm?token=' + $stateParams.token;
+
+    $http.get(url).then(
       function (response) {
-        console.log(response)
+        $scope.success = "Email confirmed. Redirecting you home ..."
+        setTimeout(function(){ 
+          $state.go('new-entrant');
+        }, 3000);
+        
       },
       function (response) {
         console.log(response)
