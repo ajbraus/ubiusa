@@ -1,10 +1,19 @@
-Elegibility
-Meet Ubi
-Back Raffle through Patreon
+DONE Elegibility
+DONE Meet Ubi
+DONE Back Raffle through Patreon
+
 Enter Raffel
 
-Winners
-Supporters
+facebook page
+
+What happens when you win?
+1. Have the option to give your UBI to someone less fortunate. In which case UBI Raffle has non-profit partners who will pick someone for whom a UBI would make an enormous impact on their life, such as preventing them from becoming homeless.
+1. Receive $1000 per month for the next 12 months
+1. Have your story shared with the UBI Raffle Community (optional)
+
+Make it look like stuff is happening:
+- Winners
+- Supporters
 
     .row
       .text-center
