@@ -1,0 +1,28 @@
+Elegibility
+Meet Ubi
+Back Raffle through Patreon
+Enter Raffel
+
+Winners
+Supporters
+
+    .row
+      .text-center
+        h3 Resources & News
+      .col-lg-4.col-lg-offset-2
+        ul
+          li
+            a(href='https://www.youtube.com/watch?v=ol4oz6_z4QM') What is a Universal Basic Income
+          li
+            a(href='https://www.reddit.com/r/BasicIncome/') Basic Income Subreddit
+          li
+            a(href='http://www.nytimes.com/2016/01/10/opinion/sunday/payback-time-for-women.html') NYT on the UBI - "Its Payback Time for Women"
+          li
+            a(href='https://www.google.com/trends/explore#q=universal%20basic%20income') Google Trends - "UBI"
+          li
+            a(href='https://www.youtube.com/watch?v=xtpgkX588nM') Milton Friedman on the Basic Income [VIDEO]
+          li
+            a(href='https://www.youtube.com/watch?v=7Pq-S557XQU&feature=iv&src_vid=SQXxcjJ5ODw&annotation_id=annotation_3904988453') Famous "Humans Need Not Apply" [VIDEO]
+      .col-lg-4
+
+terms and conditions

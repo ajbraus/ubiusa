@@ -1,6 +1,13 @@
+.patreon-logo {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+}
+
 .enter {
   background: #2c3e50;
   color:white;
+  position: relative;
 }
 
 .enter hr.star-primary {
@@ -14,4 +21,43 @@
 
 .btn-white {
   background: white;
+}
+
+.wishes {
+  height: 158px;
+  text-align: center;
+  padding-top: 62px;
+  color: white;
+  font-size: 30px;
+  width:100%;
+}
+
+.parent {
+  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("./img/parent.jpg");
+  background-size:cover;
+}
+
+.travel {
+  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("./img/travel.jpg");
+  background-size:cover;
+}
+
+.study {
+  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("./img/study.jpg");
+  background-size:cover;
+}
+
+.safer {
+  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("./img/safer.jpg");
+  background-size:cover;
+}
+
+.play {
+  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("./img/play.jpg");
+  background-size:cover;
+}
+
+.volunteer {
+  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("./img/volunteer.jpg");
+  background-size:cover;
 }

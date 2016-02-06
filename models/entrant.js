@@ -14,9 +14,9 @@ var EntrantSchema = new Schema({
   , last                : { type: String }
   , story               : { type: String }
 
-  , address_1           : { type: String }
-  , address_2           : { type: String }
+  , address             : { type: String }
   , city                : { type: String }
+  , zip                 : { type: String }
   , state               : { type: String }
   , phone               : { type: String }
 
