@@ -4,9 +4,9 @@ DONE Back Raffle through Patreon
 DONE facebook page
 DONE Enter Raffel
 DONE confirm email
+DONE open graph images/text
 
-prevent duplicate entries
-open graph images/text
+terms and conditions
 
 What happens when you win?
 1. Have the option to give your UBI to someone less fortunate. In which case UBI Raffle has non-profit partners who will pick someone for whom a UBI would make an enormous impact on their life, such as preventing them from becoming homeless.
@@ -16,6 +16,17 @@ What happens when you win?
 Make it look like stuff is happening:
 - Winners
 - Supporters
+  - copper
+  - silver
+  - gold
+  - platinum
+
+
+
+
+
+prevent duplicate entries
+
 
     .row
       .text-center
@@ -36,4 +47,3 @@ Make it look like stuff is happening:
             a(href='https://www.youtube.com/watch?v=7Pq-S557XQU&feature=iv&src_vid=SQXxcjJ5ODw&annotation_id=annotation_3904988453') Famous "Humans Need Not Apply" [VIDEO]
       .col-lg-4
 
-terms and conditions

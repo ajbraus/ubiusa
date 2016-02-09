@@ -3,16 +3,29 @@ header#page-top
   .container
     .row
       .col-md-12
-        img.img-responsive(src='img/profile.png', alt='')
+        //- img.img-responsive(src='img/profile.png', alt='')
         .intro-text
+          br
           span.name Win a Basic Income
+          br
+          br
           hr.star-light
-          .skills A Universal Basic Income (UBI) means eliminating poverty by giving every citizen above the age of sixteen $1000 per month.
           br
-          .skills UBI Raffle is a not-for-profit organization dedicated to promoting a Universal Basic Income in the United States by giving away year-long basic incomes.
           br
-          b 
-            a(href="https://www.patreon.com/ubiraffle", style="color:white;", target="_blank") Click here to support UBI Raffle
+          .row
+            .col-sm-5
+              h3 What is the UBI?
+              .skills.text-left A Universal Basic Income (UBI) is a government policy that #[b eliminates poverty] by giving every citizen over the age of sixteen $1000 per month.
+              br
+              b
+                a.btn.btn-danger(href="#about", style="color:white;") Learn More
+
+            .col-sm-5.col-sm-offset-1
+              h3 What is UBI Raffle?
+              .skills.text-left UBI Raffle is a not-for-profit organization that promotes a UBI in the United States by giving away year-long basic incomes by random drawing.
+              br
+              b 
+                a.btn.btn-danger(href="https://www.patreon.com/ubiraffle", style="color:white;", target="_blank") Support UBI Raffle
 // Portfolio Grid Section
 section#portfolio
   .container
@@ -40,22 +53,35 @@ section#about.success
       .col-md-12.text-center
         h2 How the UBI Raffle Works
         hr.star-light
-    .row
-      .col-md-8.col-md-offset-2
-        p The UBI Raffle is supported by #[a(href="https://www.patreon.com/ubiraffle?ty=h", target="_blank") recurring monthly donations through Patreon] and is #[b free to enter].
-        p To be eligible to win the UBI Raffle you must be 
-          ol 
-            li An American Citizen
-            li Over 18 Years Old
-            li Registered for the Raffle 
-        p To register for the raffle
-          ol
-            li Enter your information below
-            li Confirm your email
-            li Like the UBI Raffle Facebook page
-            li Share a link to UBIRaffle.org on Facebook, Instagram, and Twitter
-        p You will receive an email with the next winner and you can reenter at that time by sharing ubiraffle.org to social media.
-
+    .row.skills
+      .col-sm-12
+        h4 The UBI Raffle is supported by recurring monthly donations #[a(href="https://www.patreon.com/ubiraffle?ty=h", target="_blank") through Patreon] and is #[b free to enter].
+        br
+        br
+    .row.skills
+      .col-sm-4
+        h4 Elegibility
+        ul 
+          li An American Citizen
+          li Over 18 Years Old
+          li Registered for the Raffle 
+      .col-sm-4
+        h4 How to Register
+        ol
+          li Enter your information below
+          li Confirm your email
+          li Like the UBI Raffle Facebook page
+          li Share a link to UBIRaffle.org on Facebook, Instagram, and Twitter
+      .col-sm-4
+        h4 When Ubi Picks a Winner
+        ul
+          li You will be notified of the winner and other UBI Raffle news by email.
+          li Winners can accept the UBI or choose to give their UBI to someone less fortunate than them.
+          li You can reenter each month by sharing ubiraffle.org on social media.
+    br
+    br
+    .text-center
+      a.btn.btn-danger(href="https://www.patreon.com/ubiraffle", style="color:white;", target="_blank") Support UBI Raffle
 // Contact Section
 section#meet-ubi
   .container
@@ -65,7 +91,7 @@ section#meet-ubi
         hr.star-primary
     .row
       .col-md-8.col-md-offset-2.text-center
-        p Ubi (#[i you`-bee]) is the friendly mascot of the UBI Raffle. He enjoys playing games with friends, helping his owner with small tasks, camping, and artisinal cocktails.
+        p Ubi (#[i you`-bee]) is the friendly mascot of the UBI Raffle. He enjoys playing games with friends, helping his owner have more security and free time, camping, and artisinal cocktails.
         .col-md-10.col-md-offset-1.text-center
           img.img-responsive(ng-src="img/ubi.png")
           p Ubi wants you to enter and support the UBI Raffle because he really likes picking the names of the winners.
