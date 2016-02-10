@@ -24,6 +24,16 @@ angular.module('myApp', ['ui.router',
         controller: 'EntrantsIndexCtrl'
       })
 
+      .state('terms', {
+        url: "/terms-and-conditions",
+        templateUrl: 'templates/terms'
+      })
+
+      .state('privacy', {
+        url: "/privacy",
+        templateUrl: 'templates/privacy'
+      })
+
       .state('confirm-email', {
         url: "/confirm?token",
         templateUrl: 'templates/confirm-email',
