@@ -21,6 +21,12 @@ Make it look like stuff is happening:
   - gold
   - platinum
 
+Fundraising
+  - Mom & Dad
+  - YC
+  - Matt 
+  - Julianna
+  - ... 
 
 
 
@@ -46,4 +52,5 @@ prevent duplicate entries
           li
             a(href='https://www.youtube.com/watch?v=7Pq-S557XQU&feature=iv&src_vid=SQXxcjJ5ODw&annotation_id=annotation_3904988453') Famous "Humans Need Not Apply" [VIDEO]
       .col-lg-4
+
 
